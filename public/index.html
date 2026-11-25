@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glamora – Beauty & Style, Your Way</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><a class="logo" href="#/">Glamora</a><button id="burger" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav onclick="this.classList.remove('open')"><a href="#/">Home</a><a href="#/shop">Shop</a><a href="#/shop?cat=Makeup">Makeup</a><a href="#/shop?cat=Accessories">Accessories</a><a href="#/about">About Us</a><a href="#/contact">Contact</a><a href="#/track">Track Order</a></nav>
+<form id="sf" onsubmit="event.preventDefault();location.hash='#/shop?q='+encodeURIComponent(this.q.value)"><input name="q" placeholder="Search products…"></form>
+<div class="icons"><a href="#/wishlist" title="Wishlist">♡<sup id="wc">0</sup></a><a href="#/cart" title="Cart">🛍<sup id="cc">0</sup></a></div></header>
+<main id="app"></main>
+<footer><div><h3 class="logo">Glamora</h3><p>Beauty & Style, Your Way.</p></div><div><b>Shop</b><br><a href="#/shop?cat=Makeup">Makeup</a><br><a href="#/shop?cat=Accessories">Accessories</a></div><div><b>Help</b><br><a href="#/track">Track Order</a><br><a href="#/contact">Contact</a><br><a href="#/about">About Us</a></div><p class="copy">© 2026 Glamora. A school project.</p></footer>
+<div id="toast"></div><div id="modal" onclick="if(event.target==this)this.style.display='none'"></div>
+<button id="chatbtn" onclick="toggleChat()">💬</button>
+<div id="chat"><div class="ch"><span>🌸 Glamora Beauty Assistant</span><button onclick="toggleChat()">✕</button></div><div id="msgs"></div><div id="sugg"></div><form onsubmit="event.preventDefault();ask(this.m.value);this.m.value=''"><input name="m" placeholder="Ask me anything…" autocomplete="off"><button>➤</button></form></div>
+<script src="app.js"></script></body></html>
